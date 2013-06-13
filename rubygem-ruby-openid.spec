@@ -16,14 +16,14 @@
 
 Name:           rubygem-%{gem_name}
 Version:        2.2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Ruby library for verifying and serving OpenID identities
 
 Group:          Development/Libraries
 
 License:        ASL 2.0
 URL:            https://github.com/openid/ruby-openid
-Source0:        https://rubygems.org/downloads/%{gem_name}-%{version}.gem
+Source0:        http://rubygems.org/downloads/%{gem_name}-%{version}.gem
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %if 0%{?fedora}
