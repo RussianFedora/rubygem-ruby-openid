@@ -15,8 +15,9 @@
 %endif
 
 Name:           rubygem-%{gem_name}
-Version:        2.2.3
-Release:        2%{?dist}
+Epoch:          1
+Version:        2.1.8
+Release:        9%{?dist}
 Summary:        Ruby library for verifying and serving OpenID identities
 
 Group:          Development/Libraries
@@ -80,26 +81,26 @@ rm -rf %{buildroot}
 
 %files
 %dir %{gem_instdir}
-%doc %{gem_instdir}/CHANGELOG.md
-%doc %{gem_instdir}/INSTALL.md
+%doc %{gem_instdir}/CHANGELOG
+%doc %{gem_instdir}/INSTALL
 %doc %{gem_instdir}/LICENSE
 %doc %{gem_instdir}/NOTICE
-%doc %{gem_instdir}/README.md
-%doc %{gem_instdir}/UPGRADE.md
+%doc %{gem_instdir}/README
+%doc %{gem_instdir}/UPGRADE
 %{gem_libdir}
 %exclude %{gem_cache}
 %{gem_spec}
-
-
+%{gem_instdir}/admin/runtests.rb
 
 %files doc
 %doc %{gem_docdir}
 %doc %{gem_instdir}/test
 %doc %{gem_instdir}/examples
 
-
-
 %changelog
+* Tue Jun 4 2013 Sergey Mihailov <sergey.mihailov@gmail.com> - 2.1.8-9
+- Update to version
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.1.7-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
